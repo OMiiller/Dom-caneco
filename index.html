@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dom Caneco | Choperia e Restaurante</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#A61919', /* Vermelho inspirado na borda do cardápio */
+            brandYellow: '#F5A623', /* Amarelo/Dourado remetendo a chopp e cerveja */
+            darkBg: '#1A1A1A',
+            cardBg: '#2A2A2A',
+            lightCream: '#F9F8F4' /* Cor de fundo do cardápio */
+          },
+          fontFamily: {
+            sans: ['Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-lightCream text-gray-800 font-sans antialiased overflow-x-hidden">
+
+  <!-- TOP BAR -->
+  <div class="bg-brandRed text-white text-sm font-semibold py-2 text-center tracking-wide px-4 flex justify-center items-center gap-4 flex-wrap">
+    <span><i class="fa-solid fa-beer-mug-empty mr-1"></i> Choperia e Restaurante — Desde 2011</span>
+    <span class="hidden sm:inline">•</span>
+    <span><i class="fa-solid fa-tag mr-1"></i> Média: R$ 40 – R$ 120 por pessoa</span>
+  </div>
+
+  <!-- HEADER / HERO SECTION -->
+  <header class="relative bg-black min-h-[600px] flex items-center justify-center text-center px-4 overflow-hidden shadow-2xl">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0 opacity-50 bg-cover bg-center" 
+         style="background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90 z-0"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto py-12">
+      <h1 class="text-5xl md:text-7xl font-black text-white tracking-tight uppercase mb-2 drop-shadow-lg">
+        Dom <span class="text-brandYellow">Caneco</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto font-light drop-shadow-md">
+        Tradição em pratos requintados, porções generosas e o chopp mais gelado da cidade.
+      </p>
+
+      <!-- Botão WhatsApp -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 items-center">
+        <a href="https://wa.me/551936317479?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva/pedido%20no%20Dom%20Caneco." target="_blank"
+           class="bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition duration-300 flex items-center justify-center text-lg transform hover:-translate-y-1 w-full sm:w-auto">
+          <i class="fa-brands fa-whatsapp text-3xl mr-3"></i> Fale Conosco no WhatsApp
+        </a>
+        <a href="tel:01936317479" 
+           class="bg-brandRed hover:bg-red-800 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 flex items-center justify-center text-lg transform hover:-translate-y-1 w-full sm:w-auto">
+          <i class="fa-solid fa-phone mr-3"></i> (19) 3631-7479
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVIÇOS / CARDÁPIO GRID -->
+  <section class="py-20 max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold text-brandRed uppercase tracking-wider">Nossas Especialidades</h2>
+      <div class="w-24 h-1 bg-brandYellow mx-auto mt-4 mb-4"></div>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Para o almoço de fim de semana ou o happy hour, temos as melhores opções preparadas com ingredientes de primeira.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Serviço 1: Pratos e Almoço -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300 group">
+        <div class="h-56 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1544025162-811114b0b014?auto=format&fit=crop&w=600&q=80" alt="Pratos Especiais" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+        </div>
+        <div class="p-8 text-center">
+          <div class="w-16 h-16 bg-brandRed rounded-full flex items-center justify-center mx-auto -mt-16 mb-4 border-4 border-white relative z-10">
+            <i class="fa-solid fa-utensils text-white text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Pratos Premium</h3>
+          <p class="text-gray-600 text-sm">
+            Saboreie nosso famoso <strong>Filé à Parmegiana</strong>, Prime Ribe, T-Bone, ou o suculento Bife de Chorizo acompanhado de batatas rústicas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Serviço 2: Porções e Lanches -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300 group">
+        <div class="h-56 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Lanches e Porções" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+        </div>
+        <div class="p-8 text-center">
+          <div class="w-16 h-16 bg-brandRed rounded-full flex items-center justify-center mx-auto -mt-16 mb-4 border-4 border-white relative z-10">
+            <i class="fa-solid fa-burger text-white text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Lanches & Porções</h3>
+          <p class="text-gray-600 text-sm">
+            Do tradicional Bauru de Lombo e Filé às requintadas Ciabattas (como a <strong>São João da Boa Mesa</strong>), além de deliciosas porções de Carpaccio e Fritas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Serviço 3: Drinks e Chopp -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition duration-300 group">
+        <div class="h-56 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=600&q=80" alt="Drinks e Chopp" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+        </div>
+        <div class="p-8 text-center">
+          <div class="w-16 h-16 bg-brandRed rounded-full flex items-center justify-center mx-auto -mt-16 mb-4 border-4 border-white relative z-10">
+            <i class="fa-solid fa-martini-glass-citrus text-white text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Chopp & Drinks</h3>
+          <p class="text-gray-600 text-sm">
+            Refresque-se com nosso Chopp Heineken estupidamente gelado, Caipirinhas exclusivas, Mojito, Piña Colada e muito mais para o seu happy hour.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS (GOOGLE MAPS) -->
+  <section class="py-20 bg-darkBg text-white relative">
+    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brandRed via-brandYellow to-brandRed"></div>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold uppercase tracking-wider">O que dizem nossos clientes</h2>
+        <div class="w-16 h-1 bg-brandYellow mx-auto mt-4 mb-4"></div>
+        <p class="text-gray-400">Avaliações reais retiradas do Google Maps</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Avaliação 1 -->
+        <div class="bg-cardBg p-8 rounded-xl border border-gray-700 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex text-brandYellow text-lg">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-brands fa-google text-gray-400 text-xl"></i>
+          </div>
+          <p class="text-gray-300 text-sm italic mb-6">"Com certeza o melhor filé à parmegiana de São João da Boa Vista! O ambiente é super agradável, ótimo para ir com a família ou amigos, e o chopp é maravilhoso."</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center font-bold text-white mr-3">M</div>
+            <span class="text-sm font-bold uppercase text-gray-400">Marcos S.</span>
+          </div>
+        </div>
+
+        <!-- Avaliação 2 -->
+        <div class="bg-cardBg p-8 rounded-xl border border-gray-700 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex text-brandYellow text-lg">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-brands fa-google text-gray-400 text-xl"></i>
+          </div>
+          <p class="text-gray-300 text-sm italic mb-6">"Os lanches são fora de série! Pedi a Ciabatta com Salmão e me surpreendi. Atendimento rápido e cerveja trincando. Recomendo muito!"</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center font-bold text-white mr-3">A</div>
+            <span class="text-sm font-bold uppercase text-gray-400">Ana Paula C.</span>
+          </div>
+        </div>
+
+        <!-- Avaliação 3 -->
+        <div class="bg-cardBg p-8 rounded-xl border border-gray-700 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex text-brandYellow text-lg">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <i class="fa-brands fa-google text-gray-400 text-xl"></i>
+          </div>
+          <p class="text-gray-300 text-sm italic mb-6">"Local muito gostoso, mesas na calçada com aquela vibe boa de fim de semana. O bife de chorizo estava no ponto perfeito. Sempre volto!"</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center font-bold text-white mr-3">R</div>
+            <span class="text-sm font-bold uppercase text-gray-400">Ricardo V.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO E HORÁRIOS EXATOS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Informações -->
+      <div>
+        <h2 class="text-3xl font-extrabold text-gray-900 uppercase mb-4">Venha nos Visitar</h2>
+        <div class="w-16 h-1 bg-brandRed mb-8"></div>
+        
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="bg-lightCream p-3 rounded-lg text-brandRed mr-4 shadow-sm border border-gray-100 mt-1">
+              <i class="fa-solid fa-map-location-dot text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-lg">Endereço</h4>
+              <p class="text-gray-600">São João da Boa Vista - SP</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="bg-lightCream p-3 rounded-lg text-brandRed mr-4 shadow-sm border border-gray-100 mt-1">
+              <i class="fa-solid fa-clock text-2xl"></i>
+            </div>
+            <div class="w-full">
+              <h4 class="font-bold text-gray-900 text-lg mb-2">Horário de Funcionamento</h4>
+              <div class="bg-lightCream p-4 rounded-xl border border-gray-200 text-sm space-y-1 text-gray-700">
+                <div class="flex justify-between font-semibold border-b border-gray-200 pb-1">
+                  <span>Domingo:</span>
+                  <span>11:30 – 23:30</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-200 py-1 text-red-600 font-medium">
+                  <span>Segunda-feira:</span>
+                  <span>Fechado</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-200 py-1">
+                  <span>Terça-feira:</span>
+                  <span>18:00 – 00:00</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-200 py-1">
+                  <span>Quarta-feira:</span>
+                  <span>18:00 – 00:00</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-200 py-1">
+                  <span>Quinta-feira:</span>
+                  <span>18:00 – 00:00</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-200 py-1">
+                  <span>Sexta-feira:</span>
+                  <span>17:00 – 02:00</span>
+                </div>
+                <div class="flex justify-between pt-1 font-semibold">
+                  <span>Sábado:</span>
+                  <span>12:00–15:00 | 19:00–02:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="bg-lightCream p-3 rounded-lg text-brandRed mr-4 shadow-sm border border-gray-100">
+              <i class="fa-solid fa-phone text-2xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-lg">Telefone & WhatsApp</h4>
+              <a href="tel:01936317479" class="text-brandRed font-bold hover:underline text-lg">(19) 3631-7479</a>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="bg-lightCream p-3 rounded-lg text-brandRed mr-4 shadow-sm border border-gray-100">
+              <i class="fa-solid fa-dollar-sign text-2xl px-1"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-lg">Média de Preço</h4>
+              <p class="text-gray-600">R$ 40 – R$ 120 por pessoa (Avaliação Google)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapa Interativo (Google Maps) -->
+      <div class="h-[450px] rounded-2xl overflow-hidden shadow-xl border-4 border-lightCream relative group">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118224.22557434505!2d-46.85250462002347!3d-21.97931327170185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8310c83281559%3A0xc0fb1067e6c9861e!2zU8OjbyBKb8OjbyBkYSBCb2EgVmlzdGEsIFNQ!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="grayscale hover:grayscale-0 transition duration-500">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+    <p>&copy; 2026 Dom Caneco Choperia e Restaurante. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
